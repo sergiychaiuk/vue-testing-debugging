@@ -44,12 +44,8 @@
           </div>
         </div>
 
-
-
-
       </div>
     </div>
-
 
   </div>
 </template>
@@ -61,9 +57,9 @@ export default {
   components: {
 
   },
-  methods : {
-    login(){
-      this.$router.push({path : "profile"})
+  methods: {
+    login () {
+      this.$router.push({ path: 'profile' })
     }
   }
 }
