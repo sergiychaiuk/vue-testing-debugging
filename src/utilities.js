@@ -10,6 +10,14 @@ const countriesCollection = [
   'China'
 ]
 
+function asyncPrint () {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('Hello world')
+    }, 2000)
+  })
+}
+
 const johnDoe = {
   name: 'John Doe',
   age: 26,
@@ -20,5 +28,6 @@ const johnDoe = {
 module.exports = {
   addNumbers,
   countriesCollection,
-  johnDoe
+  johnDoe,
+  asyncPrint
 }
