@@ -1,4 +1,5 @@
 import { asyncPrint } from '../utilities.js'
+import { printSomething } from '../testModule.js'
 
 /* test('Test asynchronous printing', () => {
   return asyncPrint().then(data => {
