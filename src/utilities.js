@@ -2,6 +2,23 @@ function addNumbers (a, b) {
   return a + b
 }
 
+const countriesCollection = [
+  'United States',
+  'United Kingdom',
+  'Nigeria',
+  'India',
+  'China'
+]
+
+const johnDoe = {
+  name: 'John Doe',
+  age: 26,
+  sex: 'male',
+  occupation: 'Accountant'
+}
+
 module.exports = {
-  addNumbers
+  addNumbers,
+  countriesCollection,
+  johnDoe
 }
