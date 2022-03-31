@@ -1,10 +1,6 @@
 <template>
   <div class="container">
-    <!-- <div class="row">
-      <div class="col-md-12">
-        <img src="/logo.gif" />
-      </div>
-    </div> -->
+
     <div class="row">
       <div class="col-md-8" id="banner-section">
 
@@ -25,13 +21,16 @@
               </div>
 
               <div class="card-body">
+                <div v-if="showError" class="alert alert-danger" role="alert">
+                  Please enter your email and password
+                </div>
                 <form>
                   <div>
                     <div class="form-group">
-                      <input type="email" placeholder="Enter Email" class="form-control">
+                      <input v-model="email" type="email" placeholder="Enter Email" class="form-control">
                     </div>
                     <div class="form-group">
-                      <input type="password" placeholder="Enter Password" class="form-control">
+                      <input v-model="password" type="password" placeholder="Enter Password" class="form-control">
                     </div>
                     <button type="button" class="btn btn-primary" @click="login()">
                       Login
@@ -54,12 +53,23 @@
 
 export default {
   name: 'HomeView',
+  data () {
+    return {
+      email: null,
+      password: null,
+      showError: false
+    }
+  },
   components: {
 
   },
   methods: {
     login () {
-      this.$router.push({ path: 'profile' })
+      if (this.email && this.password) {
+        this.$router.push({ path: 'profile' })
+      } else {
+        this.showError = true
+      }
     }
   }
 }
