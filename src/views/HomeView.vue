@@ -108,7 +108,7 @@ export default {
             facebook: 'johndoey'
           }
         }
-        this.$store.commit('setsUer', user)
+        this.$store.commit('setUser', user)
         this.$router.push({ path: 'profile' })
       } else {
         this.showError = true
