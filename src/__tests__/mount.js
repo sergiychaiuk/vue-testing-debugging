@@ -3,4 +3,7 @@ import HomeView from '@/views/HomeView'
 
 test('Testing components', () => {
   const { getByText } = render(HomeView)
+
+  // Login to your account
+  getByText('Login to your')
 })
